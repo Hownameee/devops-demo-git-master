@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
-                    . venv/bin/activate
+                    venv/bin/activate
                     pip install --upgrade pip
                     pip install pytest
                     # If you have a requirements.txt, uncomment the next line
