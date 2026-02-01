@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
-                    source venv/bin/activate
+                    . venv/bin/activate
                     pip install --upgrade pip
                     pip install pytest
                 '''
@@ -23,8 +23,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                    venv/bin/activate
-                    pytest --junitxml=results.xml
+                    . venv/bin/activate
+                    pytest test_baitap1.py
                 '''
             }
         }
