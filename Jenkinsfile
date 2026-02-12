@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pulls code from your repository
                 checkout scm
             }
         }
